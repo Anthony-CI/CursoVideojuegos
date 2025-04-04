@@ -14,10 +14,15 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         rb.linearVelocityX = 0;
-        if (Input.GetKey(KeyCode.RightArrow))
+        //condicional para iniciar movimineto
+        if (Input.GetKey(KeyCode.RightArrow)) //movimeinto ala derecha
         {
-            rb.linearVelocityX = 5;
+            rb.linearVelocityX = 5; //velocidad del movimiento
         }
-        
+        if (Input.GetKey(KeyCode.LeftArrow)) //movimeinto ala izquierda
+        {
+            rb.linearVelocityX = -5; //velocidad del movimiento
+        }
+
     }
 }
